@@ -15,7 +15,7 @@ use App\Http\Controllers\ItemsController;
 */
 
 Route::get('/', function () {
-    return view('app');
+    return view('layouts/app');
 });
 
 Route::get('/items', [ItemsController::class, 'index']);
