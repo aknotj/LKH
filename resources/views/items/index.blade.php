@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-  <p>Content</p>
+  <p>
+    Content
+    {{$message}}
+  </p>
 @endsection

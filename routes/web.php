@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ItemsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,5 @@ Route::get('/', function () {
     return view('app');
 });
 
-Route::get('/items', function () {
-    return view('items/index');
-});
+Route::get('/items', [ItemsController::class, 'index']);
+
