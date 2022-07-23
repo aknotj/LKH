@@ -18,5 +18,12 @@
       </tr>
   </table>
   <a href="/items/{{$item->id}}/edit">Edit</a>
+  
+  <form action="/items/{{$item->id}}" method="POST">
+    {{ csrf_field() }}
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" name="" value="Delete">
+  </form>
+  
   <a href="/items">Back to index</a>
 @endsection
