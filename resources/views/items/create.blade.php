@@ -12,7 +12,7 @@
         </div>
         <div class="input-form">
           <label for="description">Description</label>
-          <input name="description">
+          <textarea name="description"></textarea>
         </div>
         <div class="input-form">
           <label for="price">Price</label>
