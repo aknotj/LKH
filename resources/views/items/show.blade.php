@@ -17,4 +17,6 @@
         <td>{{$item->stock}} pc</td>
       </tr>
   </table>
+  <a href="/items/{{$item->id}}/edit">Edit</a>
+  <a href="/items">Back to index</a>
 @endsection

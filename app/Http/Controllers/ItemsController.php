@@ -19,14 +19,14 @@ class ItemsController extends Controller
     }
 
   public function store(Request $request)
-    { 
+    {
       $item = new Item;
       $item->name = $request->name;
       $item->description = $request->description;
       $item->price = $request->price;
       $item->stock = $request->stock;
       $item->save();
-      
+
       return redirect('/items');
     }
 
@@ -38,12 +38,19 @@ class ItemsController extends Controller
 
   public function edit($id)
     {
-      //
+      $item = Item::find($id);
+      return view('items.edit', ['item' => $item]);
     }
 
   public function update(Request $request, $id)
     {
-      //
+      $item = Item::find($id);
+      $item->name = $request->name;
+      $item->description = $request->description;
+      $item->price = $request->price;
+      $item->stock = $request->stock;
+      $item->save();
+      return redirect('items/'.$id);
     }
 
   public function destroy($id)
