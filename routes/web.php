@@ -18,7 +18,4 @@ Route::get('/', function () {
     return view('layouts/app');
 });
 
-Route::get('items', [ItemsController::class, 'index']);
-Route::get('/items/create', [ItemsController::class, 'create'])->name('items.create');
-Route::post('items', [ItemsController::class, 'store'])->name('items.store');
-Route::get('items/{item_id}', [ItemsController::class, 'show'])->name('items.show');
+Route::resource('items', ItemsController::class);
