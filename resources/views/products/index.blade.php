@@ -1,24 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
-  <table>
-    <tr>
-      <th>Item Id</th>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Price</th>
-      <td>Units in stock</td>
-      <td></td>
-    </tr>
+  <div class="heading">
+    <h2>Products</h2>
+  </div>
+  <div class="products_index">
     @foreach($products as $product)
-      <tr>
-        <td>{{$product->id}}</td>
-        <td>{{$product->name}}</td>
-        <td>{{$product->description}}</td>
-        <td>{{$product->price}}</td>
-        <td>{{$product->stock}} pc</td>
-        <td><a href="/products/{{$product->id}}">Details</a></td>
-      </tr>
+      <a href="/products/{{$product->id}}">
+        <div class="product_card">
+          <div class="product_card_heading">
+            <img src="{{asset('storage/'.$product->img_path)}}">
+          </div>
+          <div class="product_info">
+            <h5>{{$product->name}}</h5>
+            <p>{{$product->description}}</p>
+            <p>$ {{$product->price}}</p>
+          </div>
+        </div>
+      </a>
     @endforeach
-  </table>
+  </div>
 @endsection
