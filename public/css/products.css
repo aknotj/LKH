@@ -1,8 +1,6 @@
 /* index page */
 
 .products_index {
-  width: 95%;
-  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -35,6 +33,7 @@
 
 
 .product_card {
+  max-width: 150px;
   border: 1px solid transparent;
   padding: 5px;
   padding: 15px;
@@ -53,6 +52,7 @@
   width: 150px;
   height: 150px;
   border-radius: 2px;
+  background-color: #909090;
   overflow: hidden;
 }
 
@@ -67,6 +67,8 @@
 
 .product_info p {
   font-size: small;
+  width: 100%;
+  overflow-wrap: break-word;
   padding: 2px 0;
 }
 
@@ -78,3 +80,45 @@
 
 /* show page */
 
+.product_show {
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+.product_wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.product_details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.product_image {
+  width: 250px;
+  height: 250px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.product_image img {
+  width: 100%;
+}
+
+.product_description {
+  width: 250px;
+  max-height: 250px;
+  overflow-wrap: break-word;
+  margin-top: auto;
+  text-align: justify;
+}
+
+.product_description h1,
+.product_description p:last-child {
+  text-align: right;
+  padding-bottom: 10px;
+}
