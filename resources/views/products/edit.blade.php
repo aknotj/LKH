@@ -32,4 +32,10 @@
       </form>
     </div>
   </div>
+
+  <form action="/products/{{$product->id}}" method="POST">
+    {{ csrf_field() }}
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" name="" value="Delete">
+  </form>
 @endsection

@@ -9,3 +9,51 @@
 body {
   padding: 30px;
 }
+
+.content {
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.back_btn a {
+  display: inline-block;
+  line-height: 20px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #545454;
+  border: 1px solid #989898;
+  border-radius: 3px;
+}
+
+.back_btn a:hover {
+  text-decoration: none;
+  animation: PubBtnHover 0.5s both;
+}
+
+@keyframes PubBtnHover {
+  0% {
+    background-color: transparent;
+    color: #545454;
+  }
+  100% {
+    background-color: #989898;
+    color: #fff;
+  }
+}
+
+.admin_area {
+  text-align: right;
+}
+
+.admin_area a {
+  display: inline-block;
+  line-height: 20px;
+  padding: 0 10px;
+  text-decoration: none;
+  color: #545454;
+}
+
+.admin_area a:hover {
+  border-bottom: 1px solid #898989;
+}

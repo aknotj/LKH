@@ -8,7 +8,9 @@
     </head>
     <body class="antialiased">
         <main>
-            @yield('content')
+            <div class="content">
+                @yield('content')
+            </div>
         </main>
     </body>
 </html>

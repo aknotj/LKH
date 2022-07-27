@@ -1,32 +1,27 @@
 @extends('layouts.app')
 
 @section('content')
-  <table>
-    <tr>
-      <th>Item Id</th>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Price</th>
-      <td>Units in stock</td>
-    </tr>
-      <tr>
-        <td>{{$product->id}}</td>
-        <td>{{$product->name}}</td>
-        <td>{{$product->description}}</td>
-        <td>{{$product->price}}</td>
-        <td>{{$product->stock}} pc</td>
-        <td>{{$product->category}}</td>
-      </tr>
-  </table>
-  <img src="{{asset('storage/'.$product->img_path)}}">
+  <div class="product_show">
+    <div class="product_wrapper">
+      <div class="product_details">
+        <div class="product_image">
+          <img src="{{asset('storage/'.$product->img_path)}}">
+        </div>
+        <div class="product_description">
+                <h1>{{$product->name}}</h1>
+          <p>{{$product->description}}</p>
+          <p>$ {{$product->price}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <a href="/products/{{$product->id}}/edit">Edit</a>
+  <div class="back_btn">
+    <a href="/products">Back to index</a>
+  </div>
 
-  <form action="/products/{{$product->id}}" method="POST">
-    {{ csrf_field() }}
-    <input type="hidden" name="_method" value="delete">
-    <input type="submit" name="" value="Delete">
-  </form>
+  <div class="admin_area">
+    <a href="/products/{{$product->id}}/edit">Edit</a>
+  </div>
 
-  <a href="/products">Back to index</a>
 @endsection
