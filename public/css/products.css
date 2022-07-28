@@ -77,7 +77,7 @@
   color: #787878;
 }
 
-
+/* end--of--index page*/
 /* show page */
 
 .product_show {
@@ -122,3 +122,104 @@
   text-align: right;
   padding-bottom: 10px;
 }
+
+/* end--of--show page */
+
+/* create/edit page */
+
+.products_create {
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+.product_form {
+  margin: 20px;
+}
+
+.product_form .input_form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.product_form label {
+  display: inline-block;
+  width: 30%;
+  text-align: right;
+}
+
+.product_form input[type=text] {
+  padding: 2px 4px;
+  outline: 0;
+  border-width: 0 0 1px;
+  border-color: #989898;
+}
+
+.product_form textarea {
+  padding: 0.5rem;
+  height: 80px;
+}
+
+.product_form textarea:focus {
+  outline: none;
+}
+
+.product_form input[name=name],
+.product_form input[name=category],
+.product_form textarea {
+  width: 55%;
+}
+
+.product_form input[name=price],
+.product_form input[name=stock] {
+  text-align: right;
+  width: 10%;
+}
+
+.product_form .actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.product_form .actions input {
+  display: inline-block;
+  line-height: 20px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #545454;
+}
+
+.product_form .update input[type=submit] {
+  border: 1px solid #989898;
+  border-radius: 3px;
+}
+
+.product_form .update input[type=submit]:hover {
+  text-decoration: none;
+  animation: SubmitBtnHover 0.2s forwards;
+}
+
+@keyframes SubmitBtnHover {
+  0% {
+    background-color: transparent;
+    color: #545454;
+  }
+  100% {
+    background-color: #989898;
+    color: #fff;
+  }
+}
+
+.product_form .delete input {
+  border: none;
+  background-color: transparent;
+}
+
+.product_form .delete input:hover {
+  border-bottom: 1px solid #898989;
+}
+
+/* end--of--create/edit page */
