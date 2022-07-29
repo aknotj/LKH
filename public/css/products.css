@@ -222,4 +222,8 @@
   border-bottom: 1px solid #898989;
 }
 
+.product_form .product_image {
+  margin: 15px auto;
+}
+
 /* end--of--create/edit page */
