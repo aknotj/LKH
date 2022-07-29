@@ -6,6 +6,9 @@
       <h2>Edit Product</h2>
     </div>
     <div class="product_form">
+      <div class="product_image">
+        <img src="{{asset('storage/'.$product->img_path)}}">
+      </div>
       <form action="/products/{{$product->id}}" method="POST">
         {{ csrf_field() }}
         <div class="input_form">
@@ -44,5 +47,4 @@
       </form>
     </div>
   </div>
-
 @endsection
