@@ -14,6 +14,7 @@ body {
   width: 95%;
   max-width: 1000px;
   margin: 0 auto;
+  padding-top: 20px;
 }
 
 .back_btn a {
@@ -57,3 +58,52 @@ body {
 .admin_area a:hover {
   border-bottom: 1px solid #898989;
 }
+
+
+/* header */
+
+nav {
+  text-align: center;
+}
+
+.header_logo {
+  font-size: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header_menu {
+  width: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.header_menu a {
+  display: inline-block;
+  line-height: 20px;
+  padding: 5px 10px;
+  color: #545454;
+}
+
+.header_menu a:hover {
+  animation: navLinkHover 0.5s both;
+}
+
+@keyframes navLinkHover {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+    color: #000;
+  }
+}
+
+
+/* end--of--header */
