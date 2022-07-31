@@ -1,0 +1,19 @@
+/* cafe page */
+
+.top_img img {
+  width: 100%;
+}
+
+.cafe_info {
+  margin: 30px auto;
+}
+
+.cafe_info th,
+.cade_info td {
+  padding: 10px 20px;
+}
+
+.cafe_info th {
+  text-align: right;
+}
+
