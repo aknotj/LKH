@@ -9,8 +9,9 @@
       <div class="product_image">
         <img src="{{asset('storage/'.$product->img_path)}}">
       </div>
-      <form action="/products/{{$product->id}}" method="POST">
-        {{ csrf_field() }}
+      <form action="/products/{{$product->id}}" method="POST" enctype="multipart/form-data">
+        @csrf
+        @method('PUT')
         <div class="input_form">
           <label for="name">Name</label>
           <input type="text" name="name" value="{{$product->name}}">
@@ -28,23 +29,26 @@
           <input type="text" name="stock" value="{{$product->stock}}">Units
         </div>
         <div class="input_form">
+          <label for="img">Image</label>
+          <input type="file" name="img_path">
+        </div>
+        <div class="input_form">
           <label for="stock">Category</label>
           <input type="text" name="category" value="{{$product->stock}}">
         </div>
         <div class="actions">
           <div class="update">
-            <input type="hidden" name="_method" value="patch">
             <input type="submit" value="Update">
-          </div>
-          <div class="delete">
-            <form action="/products/{{$product->id}}" method="POST">
-              {{ csrf_field() }}
-              <input type="hidden" name="_method" value="delete">
-              <input type="submit" name="" value="Delete" class="delete-btn">
-            </form>
           </div>
         </div>
       </form>
+      <div class="delete">
+        <form action="/products/{{$product->id}}" method="POST">
+          {{ csrf_field() }}
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" name="" value="Delete" class="delete-btn">
+        </form>
+      </div>
     </div>
   </div>
 @endsection

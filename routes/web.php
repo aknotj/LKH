@@ -21,3 +21,6 @@ Route::get('/', function () {
 
 Route::resource('items', ItemsController::class);
 Route::resource('products', ProductsController::class);
+Route::get('/cafe', function() {
+  return view('layouts/cafe');
+});

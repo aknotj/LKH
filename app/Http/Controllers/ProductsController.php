@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProductsController extends Controller
 {
@@ -27,9 +28,13 @@ class ProductsController extends Controller
       $product->stock = $request->stock;
       $product->stock = $request->stock;
       $product->category = $request->category;
-      $imgName = $request->img_path->getClientOriginalName();
-      $img = $request->img_path->storeAs('',$imgName,'public');
-      $product->img_path = $img;
+      if ($request->hasfile('img_path')){
+        $img = $request->file('img_path');
+        $extension = $request->img_path->getClientOriginalExtension();
+        $imgName = 'product'.$product->id.'_'.time().'.'.$extension;
+        $img = $request->img_path->storeAs('',$imgName,'public');
+        $product->img_path = $imgName;
+      }
       $product->save();
 
       return redirect('/products');
@@ -50,17 +55,36 @@ class ProductsController extends Controller
   public function update(Request $request, $id)
     {
       $product = Product::find($id);
+
+      $oldImg = $product->img_path;
+      if ($img = $request->file('img_path')){
+        if (Storage::disk('public')->exists($oldImg)) {
+          Storage::disk('public')->delete($oldImg);
+        }
+        $extension = $request->img_path->getClientOriginalExtension();
+        $imgName = 'product'.$product->id.'_'.time().'.'.$extension;
+        $img = $request->img_path->storeAs('',$imgName,'public');
+        $product->img_path = $imgName;
+      } else {
+        $product->img_path = $oldImg;
+      }
+
       $product->name = $request->name;
       $product->description = $request->description;
       $product->price = $request->price;
       $product->stock = $request->stock;
-      $product->save();
+
+      $product->update();
       return redirect('products/'.$id);
     }
 
   public function destroy($id)
     {
       $product = Product::find($id);
+      $img = $product->img_path;
+      if (Storage::disk('public')->exists($img)) {
+        Storage::disk('public')->delete($img);
+      }
       $product->delete();
       return redirect('/products');
     }
