@@ -8,6 +8,11 @@
   margin: 30px auto;
 }
 
+.cafe_info table {
+  margin-left: auto;
+  padding-right: 5%;
+}
+
 .cafe_info th,
 .cade_info td {
   padding: 10px 20px;
@@ -17,3 +22,6 @@
   text-align: right;
 }
 
+.cafe_info span {
+  font-size: smaller;
+}
