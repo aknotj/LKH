@@ -177,11 +177,10 @@
   width: 10%;
 }
 
-.product_form .actions {
+.product_form .actions,
+.product_form .delete {
   margin-top: 20px;
-  display: flex;
-  justify-content: flex-end;
-  gap: 5px;
+  text-align: right;
 }
 
 .product_form .actions input {
@@ -214,6 +213,11 @@
 }
 
 .product_form .delete input {
+  display: inline-block;
+  line-height: 20px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #545454;
   border: none;
   background-color: transparent;
 }

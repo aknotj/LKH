@@ -6,8 +6,8 @@
       <h2>Edit Product</h2>
     </div>
     <div class="product_form">
-      <form action="/products" method="POST">
-        {{ csrf_field() }}
+      <form action="/products" method="POST" enctype="multipart/form-data">
+        @csrf
         <div class="input_form">
           <label for="name">Name</label>
           <input type="text" name="name">
@@ -28,10 +28,14 @@
           <label for="stock">Category</label>
           <input type="text" name="category">
         </div>
+        <div class="input_form">
+          <label for="img">Image</label>
+          <input type="file" name="img_path">
+        </div>
         <div class="actions">
           <div class="update">
-            <input type="hidden" name="_method" value="patch">
-            <input type="submit" value="Submite">
+            <input type="hidden" name="_method" value="post">
+            <input type="submit" value="Submit">
           </div>
         </div>
       </form>
