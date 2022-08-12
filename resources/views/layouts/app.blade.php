@@ -23,5 +23,9 @@
                 @yield('content')
             </div>
         </main>
+        <footer>
+            <p>det Lille Lyserødt Kaffehus</p>
+            <p>Lyserødvej 12B, 3000 Gurre</p>
+        </footer>
     </body>
 </html>

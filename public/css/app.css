@@ -7,13 +7,10 @@
 
 }
 
-body {
-  padding: 30px;
-}
-
 .content {
-  width: 95%;
+  width: 90%;
   max-width: 1000px;
+  min-height: 78vh;
   margin: 0 auto;
   padding-top: 20px;
 }
@@ -63,6 +60,10 @@ body {
 
 /* header */
 
+header {
+  padding-top: 30px;
+}
+
 nav {
   text-align: center;
 }
@@ -108,3 +109,18 @@ nav a {
 
 
 /* end--of--header */
+
+/* footer */
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  background-color: #2e1503;
+}
+
+footer p {
+  color: #fff;
+  font-size: 12px;
+}
+
+/* end--of--footer */
