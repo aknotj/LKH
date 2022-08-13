@@ -24,3 +24,6 @@ Route::resource('products', ProductsController::class);
 Route::get('/cafe', function() {
   return view('layouts/cafe');
 });
+Route::get('/about', function() {
+  return view('layouts/about');
+});

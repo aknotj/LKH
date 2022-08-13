@@ -11,7 +11,7 @@
             <nav>
                 <a href="/" class="header_logo">det Lille Lyserødt Kaffehus</a>
                 <ul class="header_menu">
-                    <li><a href="">About</a></li>
+                    <li><a href="/about">About</a></li>
                     <li><a href="/products">Products</a></li>
                     <li><a href="/cafe">Cafe</a></li>
                     <li><a href="">Contact</a></li>
