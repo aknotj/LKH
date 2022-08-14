@@ -19,7 +19,6 @@ Route::get('/', function () {
     return view('layouts/app');
 });
 
-Route::resource('items', ItemsController::class);
 Route::resource('products', ProductsController::class);
 Route::get('/cafe', function() {
   return view('layouts/cafe');
