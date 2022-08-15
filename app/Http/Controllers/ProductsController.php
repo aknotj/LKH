@@ -22,10 +22,16 @@ class ProductsController extends Controller
   public function store(Request $request)
     {
       $product = new Product;
+      $validated = $request->validate([
+          'name' => 'required',
+          'description' => 'required|max:200',
+          'price' => 'required|max:10',
+          'category' => 'required',
+          'img_path' => 'required'
+        ]);
       $product->name = $request->name;
       $product->description = $request->description;
       $product->price = $request->price;
-      $product->stock = $request->stock;
       $product->stock = $request->stock;
       $product->category = $request->category;
       if ($request->hasfile('img_path')){
@@ -35,6 +41,7 @@ class ProductsController extends Controller
         $img = $request->img_path->storeAs('',$imgName,'public');
         $product->img_path = $imgName;
       }
+      
       $product->save();
 
       return redirect('/products');
