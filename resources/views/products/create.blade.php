@@ -6,6 +6,15 @@
       <h2>Edit Product</h2>
     </div>
     <div class="product_form">
+      @if ($errors->any())
+        <div class="errors">
+          <ul>
+            @foreach ($errors->all() as $error)
+              <li>{{$error}}</li>
+            @endforeach
+          </ul>
+        </div>
+      @endif
       <form action="/products" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="input_form">

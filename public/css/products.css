@@ -1,3 +1,13 @@
+/* error messages */
+.errors {
+  margin: 30px;
+}
+
+.errors ul {
+  list-style: circle inside;
+  color: red;
+}
+
 /* index page */
 
 .products_index {
