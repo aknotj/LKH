@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemsController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,7 @@ Route::get('/', function () {
 });
 
 Route::resource('products', ProductsController::class);
+Route::resource('contacts', ContactController::class);
 Route::get('/cafe', function() {
   return view('layouts/cafe');
 });
