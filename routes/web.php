@@ -21,7 +21,12 @@ Route::get('/', function () {
 });
 
 Route::resource('products', ProductsController::class);
-Route::resource('contacts', ContactController::class);
+Route::resource('contacts', ContactController::class)->except([
+    'create', 'edit', 'destroy'
+  ]);
+Route::get('/contact_form', function() {
+  return view('contacts/create');
+});
 Route::get('/cafe', function() {
   return view('layouts/cafe');
 });
