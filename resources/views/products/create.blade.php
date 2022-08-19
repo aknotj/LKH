@@ -3,7 +3,7 @@
 @section('content')
   <div class="products_create">
     <div class="heading">
-      <h2>Edit Product</h2>
+      <h2>Create Product</h2>
     </div>
     <div class="product_form">
       @if ($errors->any())

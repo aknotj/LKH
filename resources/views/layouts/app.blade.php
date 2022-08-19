@@ -14,7 +14,7 @@
                     <li><a href="/about">About</a></li>
                     <li><a href="/products">Products</a></li>
                     <li><a href="/cafe">Cafe</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="/contact_form">Contact</a></li>
                 </ul>
             </nav>
         </header>
