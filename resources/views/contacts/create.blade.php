@@ -19,8 +19,8 @@
           <input type="text" name="name">
         </div>
         <div class="input_form">
-          <label for="email">email</label>
-          <input type="email" name="email">USD
+          <label for="email">Email</label>
+          <input type="email" name="email">
         </div>
         <div class="input_form">
           <label for="content">Content</label>

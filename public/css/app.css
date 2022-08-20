@@ -1,10 +1,11 @@
 @import 'products.css';
 @import 'about.css';
+@import 'contact.css';
 
 * {
   margin: 0;
   padding: 0;
-
+  
 }
 
 .content {
