@@ -124,3 +124,17 @@ footer p {
 }
 
 /* end--of--footer */
+
+/* common elements */
+
+/* error messages */
+.errors {
+  margin: 30px;
+}
+
+.errors ul {
+  list-style: circle inside;
+  color: red;
+}
+
+/* end--of--error messages */
