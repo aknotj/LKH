@@ -9,7 +9,7 @@
       <ul>
         @foreach($contacts as $contact)
           <li>
-            <a href="/contacts/{{$contact->id}}">
+            <a href="/inbox/{{$contact->id}}">
               <h4>{{$contact->name}}</h4>
               <p>{{$contact->email}}</p>
               <p>{{$contact->content}}</p>
