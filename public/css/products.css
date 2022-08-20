@@ -1,12 +1,3 @@
-/* error messages */
-.errors {
-  margin: 30px;
-}
-
-.errors ul {
-  list-style: circle inside;
-  color: red;
-}
 
 /* index page */
 
@@ -146,38 +137,40 @@
   margin: 20px;
 }
 
-.product_form .input_form {
+.input_form {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 10px;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
-.product_form label {
+label {
   display: inline-block;
-  width: 30%;
+  width: 25%;
   text-align: right;
 }
 
-.product_form input[type=text] {
+input[type=text],
+input[type=email] {
   padding: 2px 4px;
   outline: 0;
   border-width: 0 0 1px;
   border-color: #989898;
 }
 
-.product_form textarea {
+textarea {
   padding: 0.5rem;
   height: 80px;
 }
 
-.product_form textarea:focus {
+textarea:focus {
   outline: none;
 }
 
-.product_form input[name=name],
-.product_form input[name=category],
-.product_form textarea {
+input[name=name],
+input[name=category],
+input[name=email],
+textarea {
   width: 55%;
 }
 
@@ -187,13 +180,13 @@
   width: 10%;
 }
 
-.product_form .actions,
+.actions,
 .product_form .delete {
   margin-top: 20px;
   text-align: right;
 }
 
-.product_form .actions input {
+.actions input {
   display: inline-block;
   line-height: 20px;
   padding: 5px 10px;
