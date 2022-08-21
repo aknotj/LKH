@@ -12,7 +12,7 @@
           </ul>
         </div>
       @endif
-      <form action="/contacts" method="POST" enctype="multipart/form-data">
+      <form action="/inbox" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="input_form">
           <label for="name">Name</label>

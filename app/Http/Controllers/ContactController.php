@@ -18,11 +18,6 @@ class ContactController extends Controller
       return view('contacts/index', ['contacts' => $contacts]);
     }
 
-  public function create()
-    {
-      return view('contacts/create');
-    }
-
   public function store(Request $request)
     {
       $contact = new Contact;
@@ -34,7 +29,7 @@ class ContactController extends Controller
       $contact->name = $request->name;
       $contact->email = $request->email;
       $contact->content = $request->content;
-      
+
       $contact->save();
 
       return redirect('contact_form');
@@ -53,7 +48,7 @@ class ContactController extends Controller
       $contact->name = $request->name;
       $contact->email = $request->email;
       $contact->content = $request->content;
-      
+
       $contact->update();
 
       return redirect('contacts');
