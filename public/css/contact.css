@@ -16,3 +16,36 @@
 .contact_form {
   margin: 20px;
 }
+
+.messages ul {
+ list-style: none;
+}
+
+.message a {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  padding: 5px 10px;
+}
+
+.message a:hover {
+  background-color: #f2f2f2;
+}
+
+.message .status {
+  width: 30px;
+  color: #9b0e27;
+  font-size: 10px;
+  margin: auto 0;
+}
+
+.message h4 {
+  width: 100px;
+}
+
+.message_content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 80%;
+}
