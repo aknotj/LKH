@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 Route::resource('products', ProductsController::class);
-Route::resource('contacts', ContactController::class)->except([
+Route::resource('inbox', ContactController::class)->except([
     'create', 'edit', 'destroy'
   ]);
 Route::get('/contact_form', function() {

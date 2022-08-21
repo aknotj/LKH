@@ -3,16 +3,20 @@
 @section('content')
   <div class="contacts_index">
     <div class="heading">
-      <h2>Messages</h2>
+      <h2>Inbox</h2>
     </div>
     <div class="messages">
       <ul>
         @foreach($contacts as $contact)
-          <li>
-            <a href="/contacts/{{$contact->id}}">
+          <li class="message">
+            <a href="/inbox/{{$contact->id}}">
+              <p class="status">
+                @if ($contact->is_checked = 1)
+                  NEW!
+                @endif
+              </p>
               <h4>{{$contact->name}}</h4>
-              <p>{{$contact->email}}</p>
-              <p>{{$contact->content}}</p>
+              <p class="message_content">{{$contact->content}}</p>
             </a>
           </li>
         @endforeach
