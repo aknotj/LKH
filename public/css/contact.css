@@ -49,3 +49,32 @@
   white-space: nowrap;
   width: 80%;
 }
+
+/* show page */
+.contact_show {
+  min-height: 50vh;
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact_content {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.contact_content th {
+  height: 40px;
+  width: 80px;
+  text-align: right;
+  vertical-align: top;
+}
+
+.contact_content td {
+  padding-left: 10px;
+  vertical-align: top;
+}
+
+
+
+/* end--of--show page */

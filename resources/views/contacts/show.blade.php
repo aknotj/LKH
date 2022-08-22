@@ -2,18 +2,36 @@
 
 @section('content')
   <div class="contact_show">
-    <div class="contact_content">
-      <h1>{{$contact->name}}</h1>
-      <p>{{$contact->email}}</p>
-      <p>$ {{$contact->content}}</p>
-    </div>
+    <h3>Message details</h3>
+    <hr>
+    <p>ID {{$contact->id}}</p>
+    <table class="contact_content">
+      <tr>
+        <th>Name:</th>
+        <td>{{$contact->name}}</td>
+      </tr>
+      <tr>
+        <th>Email: </th>
+        <td>{{$contact->name}}</td>
+      </tr>
+      <tr>
+        <th>Sent on: </th>
+        <td>{{$contact->created_at->format('M/d/Y h:i')}}</td>
+      </tr>
+      <tr>
+        <th>Content: </th>
+        <td>{{$contact->content}}</td>
+      </tr>
+    </table>
     <div class="status">
-      <p>{{$contact->checked}}</p>
+      @if ($contact->is_checked = 0)
+        <p>DONE</p>
+      @endif
     </div>
   </div>
 
   <div class="back_btn">
-    <a href="/contacts">Back to index</a>
+    <a href="/inbox">Back to index</a>
   </div>
 
 @endsection
