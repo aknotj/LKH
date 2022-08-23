@@ -22,5 +22,8 @@
         @endforeach
       </ul>
     </div>
+    <div class="pagination">
+      {{$contacts->links()}}
+    </div>
   </div>
 @endsection
