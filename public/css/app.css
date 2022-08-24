@@ -5,7 +5,7 @@
 * {
   margin: 0;
   padding: 0;
-  
+
 }
 
 .content {
@@ -14,6 +14,10 @@
   min-height: 78vh;
   margin: 0 auto;
   padding-top: 20px;
+}
+
+main {
+  padding-top: 110px;
 }
 
 .back_btn a {
@@ -63,6 +67,10 @@
 
 header {
   padding-top: 30px;
+  padding-bottom: 15px;
+  background-color: #ecb7bf;
+  width: 100%;
+  position: fixed;
 }
 
 nav {
@@ -116,7 +124,7 @@ footer {
   width: 100%;
   text-align: center;
   padding: 20px 0;
-  background-color: #2e1503;
+  background-color: #ecb7bf;
 }
 
 footer p {

@@ -9,7 +9,7 @@ class Contact extends Model
 {
     use HasFactory;
     
-    protected $talbe = 'contactss';
+    protected $table = 'contacts';
     
     public $guarded = ['id', 'created_at'];
 
