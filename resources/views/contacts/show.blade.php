@@ -24,9 +24,23 @@
       </tr>
     </table>
     <div class="status">
-      @if ($contact->is_checked = 0)
-        <p>DONE</p>
-      @endif
+      <form action="/inbox/{{$contact->id}}" method="POST" enctype="multipart/form-data">
+        @csrf
+        @method('PUT')
+        <p>Status:
+          @if ($contact->is_checked == 0)
+            Pending
+          @else
+            Closed
+          @endif
+        </p>
+        <select name="is_checked">
+          <option value="0">Pending</option>
+          <option value="1">Close</option>
+        </select>
+        <input type="submit" value="update">
+      </form>
+
     </div>
   </div>
 
