@@ -11,7 +11,7 @@
           <li class="message">
             <a href="/inbox/{{$contact->id}}">
               <p class="status">
-                @if ($contact->is_checked = 1)
+                @if ($contact->is_checked == 0)
                   NEW!
                 @endif
               </p>

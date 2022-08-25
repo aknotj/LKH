@@ -45,12 +45,9 @@ class ContactController extends Controller
     {
       $contact = Contact::find($id);
 
-      $contact->name = $request->name;
-      $contact->email = $request->email;
-      $contact->content = $request->content;
-
+      $contact->is_checked = $request->is_checked;
       $contact->update();
 
-      return redirect('contacts');
+      return redirect('inbox');
     }
 }
