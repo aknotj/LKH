@@ -12,9 +12,13 @@ class ContactController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-  public function index()
+  public function index(Request $request)
     {
-      $contacts = Contact::orderBy('id', 'desc')->simplePaginate(15);
+      if($request->sortIndex == 'hide') {
+          $contacts = Contact::where('is_checked', "=", 0)->orderBy('id', 'desc')->simplePaginate(15);
+      } else {
+          $contacts = Contact::orderBy('id', 'desc')->simplePaginate(15);
+      }
       return view('contacts/index', ['contacts' => $contacts]);
     }
 
