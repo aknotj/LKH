@@ -22,26 +22,30 @@
         <th>Content: </th>
         <td>{{$contact->content}}</td>
       </tr>
-    </table>
-    <div class="status">
-      <form action="/inbox/{{$contact->id}}" method="POST" enctype="multipart/form-data">
-        @csrf
-        @method('PUT')
-        <p>Status:
+      <tr>
+        <th>Status: </th>
+        <td>
           @if ($contact->is_checked == 0)
             Pending
           @else
             Closed
           @endif
-        </p>
-        <select name="is_checked">
-          <option value="0">Pending</option>
-          <option value="1">Close</option>
-        </select>
-        <input type="submit" value="update">
-      </form>
 
-    </div>
+          <div class="status">
+            Update status to
+            <form action="/inbox/{{$contact->id}}" method="POST" enctype="multipart/form-data">
+              @csrf
+              @method('PUT')
+              <select name="is_checked">
+                <option value="0">Pending</option>
+                <option value="1">Close</option>
+              </select>
+              <input type="submit" value="update">
+            </form>
+          </div>
+        </td>
+      </tr>
+    </table>
   </div>
 
   <div class="back_btn">

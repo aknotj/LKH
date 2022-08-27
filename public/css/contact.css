@@ -84,6 +84,22 @@
   vertical-align: top;
 }
 
+.status {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
 
+.status select {
+  background-color: transparent;
+  padding: 2px 5px;
+}
+
+.status input {
+  padding: 2px 5px;
+  border: none;
+  background-color: transparent;
+}
 
 /* end--of--show page */
