@@ -70,10 +70,10 @@
 .contact_content {
   width: 100%;
   margin-top: 20px;
+  border-spacing: 20px;
 }
 
 .contact_content th {
-  height: 40px;
   width: 80px;
   text-align: right;
   vertical-align: top;
@@ -94,12 +94,16 @@
 .status select {
   background-color: transparent;
   padding: 2px 5px;
+  border-radius: 3px;
 }
 
 .status input {
   padding: 2px 5px;
   border: none;
-  background-color: transparent;
+}
+
+.status input:hover {
+  background-color: lightgrey;
 }
 
 /* end--of--show page */
