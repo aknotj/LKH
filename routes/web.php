@@ -16,7 +16,7 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::get('/', function () {
+Route::get('top', function () {
     return view('layouts/app');
 });
 
